@@ -1,0 +1,99 @@
+########################
+#Main Directories
+Pictures/
+Desktop/
+Documents/
+Downloads/
+Music/
+Public/
+Templates/
+Videos/
+
+########################
+# System
+.ssh/
+.thumbnails/
+
+.bash_history
+.zhistory
+.zsh_history
+
+.cache
+.xsession-errors
+.xsession-errors.old
+
+.config/falkon/profiles/
+
+*.log
+.config/dconf/user
+.Xauthority
+.local/share/recently-used.xbel
+.local/share/gvfs-metadata/home
+.local/share/Trash/
+.config/cef_user_data/Dictionaries/
+.config/cef_user_data/WidevineCdm/
+.local/share/gvfs-metadata/
+# keystring
+.pki/nssdb/
+.gnupg/
+# Desktop customize and feel
+.config/gtk-3.0/settings.ini
+# java
+.m2/
+.java/
+# LXAppereance do not edit
+.icons/default/index.theme
+.gtkrc-2.0
+# Savable login credential DB or key for downloding package
+.local/share/keyrings/
+
+########################
+# System Apps
+.viminfo
+.config/pulse/
+.config/sublime-text/Local/
+.config/pcmanfm/default/pcmanfm.conf
+.config/pamac/config
+.local/share/clipit/history
+.moc/
+!.moc/config
+.config/ranger/*
+!.config/ranger/rc.conf
+.local/share/ranger/
+.config/xarchiver/
+.config/htop/
+.config/viewnior/
+.config/nitrogen/
+
+########################
+# Apps
+.config/Bitwarden/
+
+.config/GitKraken/
+.gitkraken/
+
+.config/google-chrome/
+
+.config/Signal/
+
+.mozilla/
+
+.local/share/JetBrains/Toolbox/
+
+.local/share/Steam/
+.steam/
+.local/share/vulkan/
+
+.config/sublime-text/
+.config/Postman/
+.config/obsidian/
+.config/WebCatalog/
+.config/Clementine/
+.config/libreoffice/
+.config/discord/
+
+.config/Code - OSS/
+.vscode-oss/
+.config/dmenu-recent/
+
+
