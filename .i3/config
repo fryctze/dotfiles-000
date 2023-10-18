@@ -74,7 +74,7 @@ bindsym $alt+Shift+F6 exec playerctl previous
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $alt+F2 workspace $ws2; exec firefox
-# bindsym $mod+F2 workspace $ws2; exec google-chrome-stable
+bindsym $mod+F2 workspace $ws2; exec google-chrome-stable
 bindsym $mod+F3 workspace $ws5; exec pcmanfm
 bindsym $alt+F3 workspace $ws5; exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
@@ -251,6 +251,11 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+
+for_window [class="jetbrains-phpstorm" title="splash"] floating enable
+for_window [class="jetbrains-webstorm" title="splash"] floating enable
+for_window [class="jetbrains-studio" title="splash"] floating enable
+for_window [class="xdman-Main"instance="xdman-Main"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
