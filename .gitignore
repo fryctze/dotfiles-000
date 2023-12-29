@@ -13,6 +13,7 @@ Videos/
 # System
 .ssh/
 .thumbnails/
+.local/share/icons/
 
 .bash_history
 .zhistory
@@ -33,6 +34,7 @@ Videos/
 .config/cef_user_data/Dictionaries/
 .config/cef_user_data/WidevineCdm/
 .local/share/gvfs-metadata/
+.config/QtProject/
 # keystring
 .pki/nssdb/
 .gnupg/
@@ -54,8 +56,8 @@ Videos/
 .config/sublime-text/Local/
 .config/pcmanfm/default/pcmanfm.conf
 .config/pamac/config
-.local/share/clipit/history
-.moc/
+.local/share/clipit/
+.moc/*
 !.moc/config
 .config/ranger/*
 !.config/ranger/rc.conf
@@ -64,26 +66,14 @@ Videos/
 .config/htop/
 .config/viewnior/
 .config/nitrogen/
+.config/dmenu-recent/
 
 ########################
 # Apps
 .config/Bitwarden/
-
-.config/GitKraken/
-.gitkraken/
-
 .config/google-chrome/
-
 .config/Signal/
-
 .mozilla/
-
-.local/share/JetBrains/Toolbox/
-
-.local/share/Steam/
-.steam/
-.local/share/vulkan/
-
 .config/sublime-text/
 .config/Postman/
 .config/obsidian/
@@ -91,9 +81,56 @@ Videos/
 .config/Clementine/
 .config/libreoffice/
 .config/discord/
-
+.local/share/TelegramDesktop/
+.config/Authy Desktop/
+.arduino15/
+# Zoom
+.zoom/
+.config/zoom.conf
+.config/zoomus.conf
+.config/Unknown Organization/
+# wine
+.wine/
+.local/share/mime/
+.local/share/applications/wine-extension*
+# gitkraken
+.config/GitKraken/
+.gitkraken/
+.gk/
+#steam
+.local/share/Steam/
+.steam/
+.local/share/vulkan/
+# vscode
 .config/Code - OSS/
 .vscode-oss/
-.config/dmenu-recent/
+# xdman
+.xdm-global-lock
+.xdman/
+.config/chromium/NativeMessagingHosts/xdm_chrome.native_host.json
+# jetbrain
+.config/jgit/
+.local/share/applications/jetbrains**.desktop
+.local/share/JetBrains/Toolbox/
+.config/JetBrains/
+.local/share/JetBrains/
+# n
+.local/.root/.n/
+.local/.root/.npm/
+.local/.root/.yarn/
+.config/yarn/
+# android
+.android
+.gradle
+.config/Google/AndroidStudio2022.2/
+.config/Google/AndroidStudio2022.3/
+.local/share/Google/consentOptions/accepted
+# composer
+.config/composer/
+.local/share/composer/
+# laravel tinker 0> command history
+.config/psysh/
+
+
 
 
