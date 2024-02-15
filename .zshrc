@@ -110,11 +110,14 @@ export ANDROID_HOME="$HOME/.android/Sdk/"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lamp-start='sudo systemctl start php-fpm mysqld httpd'
+alias lamp-restart='sudo systemctl restart php-fpm mysqld httpd'
 alias lamp-stop='sudo systemctl start php-fpm mysqld httpd'
 alias lamp7-start='sudo systemctl start php7-fpm mysqld httpd'
+alias lamp7-restart='sudo systemctl restart php7-fpm mysqld httpd'
 alias lamp7-stop='sudo systemctl stop php7-fpm mysqld httpd'
 
-alias artisan-clear='php artisan config:cache && php artisan route:cache && php artisan view:clear && php artisan view:cache'
+alias artisan-clear='php artisan config:clear && php artisan route:clear && php artisan view:clear'
+alias artisan-cache='php artisan config:cache && php artisan route:cache && php artisan view:cache'
 
 # Whatever your node version is, you'll be using latest npm version regardless (By adding preserve on N code below)
 # Because each node are always includes npm npx corepack with their own version
@@ -127,3 +130,9 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/fryctze/Documents/Project/Gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/fryctze/Documents/Project/Gcloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/fryctze/Documents/Project/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/fryctze/Documents/Project/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
