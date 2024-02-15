@@ -84,6 +84,9 @@ Videos/
 .local/share/TelegramDesktop/
 .config/Authy Desktop/
 .arduino15/
+# smart git
+.config/smartgit/23.1/
+.config/smartgit/23.1/
 # Zoom
 .zoom/
 .config/zoom.conf
@@ -132,5 +135,41 @@ Videos/
 .config/psysh/
 
 
+.config/gcloud/
+
+.config/smartgit/
+
+.config/vlc/
+
+.local/share/vlc/
+
+.config/BraveSoftware/Brave-Browser/
+.config/chromium/
+.npm
+dwhelper
+.wakatime
+.wakatime.bdb
+
+.wakatime.cfg
+
+.config/Google/AndroidStudio2023.1/
+
+.local/share/applications/brave-agimnkijcaahngcdmfeangaknmldooml-Default.desktop
+
+.greentunnel/
+
+.mariadb_history
+
+.local/share/virtualenv/
 
 
+.config/qBittorrent/
+.local/share/qBittorrent/
+
+# flatpak
+.var/app/com.jetpackduba.Gitnuro/
+
+# zsh
+.zcompdump-AI-chan-5.9.zwc
+.zcompdump-AI-chan-5.9
+.zshrc.backup
