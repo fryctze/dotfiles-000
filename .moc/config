@@ -278,12 +278,15 @@ Theme = manjaro
 #             Fastdir3 = /mp3/rap
 #             Fastdir4 = /mp3/etc
 #
-MusicDir = /run/media/fryctze/A25E5A905E5A5D5B/Users/vicky/Music
-Fastdir1 = /run/media/fryctze/A25E5A905E5A5D5B/Users/vicky/Music
-Fastdir2 = /home/fryctze/Music
-#Fastdir3 =
-#Fastdir4 =
-#Fastdir5 =
+# MusicDir = /run/media/fryctze/A25E5A905E5A5D5B/Users/vicky/Music
+# Fastdir1 = /run/media/fryctze/A25E5A905E5A5D5B/Users/vicky/Music
+MusicDir = /home/fryctze/Documents/mnt/Users/vicky/Music
+
+Fastdir1 = /home/fryctze/Documents/mnt/Users/vicky/Music
+Fastdir2 = /home/fryctze/Documents/mnt/Users/vicky/Music/Playlists
+Fastdir3 = /run/media/fryctze/A25E5A905E5A5D5B/Users/vicky/Music
+Fastdir4 = /run/media/fryctze/A25E5A905E5A5D5B/Users/vicky/Music/Playlists
+Fastdir5 = /home/fryctze/Music
 #Fastdir6 =
 #Fastdir7 =
 #Fastdir8 =
