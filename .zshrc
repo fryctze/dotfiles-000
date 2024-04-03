@@ -136,3 +136,22 @@ if [ -f '/home/fryctze/Documents/Project/Gcloud/google-cloud-sdk/path.zsh.inc' ]
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/fryctze/Documents/Project/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/fryctze/Documents/Project/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+
+
+# Set a timeout for SSH keys (e.g., 1 hour)
+# export SSH_AGENT_TIMEOUT=3600
+# Function to start SSH agent with agent forwarding
+# 43200 = 12 hour || 86400 = 24 hour
+start-ssh() {
+    eval "$(ssh-agent -s)" &&
+    ssh-add -t 43200 ~/.ssh/me &&
+    ssh-add -L
+}
+# Function to stop SSH agent
+stop-ssh() {
+    eval "$(ssh-agent -k)" &&
+    unset SSH_AUTH_SOCK &&
+    unset SSH_AGENT_PID
+}

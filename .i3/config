@@ -74,7 +74,7 @@ bindsym $alt+Shift+F6 exec playerctl previous
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $alt+F2 workspace $ws2; exec firefox
-bindsym $mod+F2 workspace $ws2; exec google-chrome-stable
+bindsym $mod+F2 workspace $ws2; exec brave
 bindsym $mod+F3 workspace $ws5; exec pcmanfm
 bindsym $alt+F3 workspace $ws5; exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec

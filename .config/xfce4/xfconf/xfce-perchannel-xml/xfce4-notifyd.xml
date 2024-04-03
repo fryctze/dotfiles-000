@@ -7,8 +7,12 @@
       <value type="string" value="Firefox"/>
       <value type="string" value="jetbrains-toolbox.desktop"/>
       <value type="string" value="notify-send"/>
+      <value type="string" value="org.clementine_player.Clementine"/>
       <value type="string" value="org.freedesktop.network-manager-applet"/>
       <value type="string" value="org.manjaro.pamac.manager"/>
+      <value type="string" value="org.manjaro.pamac.tray"/>
+      <value type="string" value="Studio"/>
+      <value type="string" value="WebCatalog"/>
     </property>
   </property>
 </channel>

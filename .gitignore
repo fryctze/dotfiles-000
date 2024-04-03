@@ -117,6 +117,8 @@ Videos/
 .local/share/JetBrains/Toolbox/
 .config/JetBrains/
 .local/share/JetBrains/
+# sportify adblock
+.config/spotify/
 # n
 .local/.root/.n/
 .local/.root/.npm/
@@ -125,8 +127,8 @@ Videos/
 # android
 .android
 .gradle
-.config/Google/AndroidStudio2022.2/
-.config/Google/AndroidStudio2022.3/
+.config/Google/
+.config/Google/AndroidStudio2023.2/
 .local/share/Google/consentOptions/accepted
 # composer
 .config/composer/
@@ -167,9 +169,36 @@ dwhelper
 .local/share/qBittorrent/
 
 # flatpak
+.local/share/flatpak/
+.pkg-cache/
+.skiko/
+# flatpak apps
 .var/app/com.jetpackduba.Gitnuro/
+.var/app/com.github.Murmele.Gittyup/
+.var/app/com.syntevo.SmartGit/
+.var/app/com.gitfiend.GitFiend/
+.var/app/com.github.git_cola.git-cola/
+.var/app/com.opera.Opera/
 
 # zsh
 .zcompdump-AI-chan-5.9.zwc
 .zcompdump-AI-chan-5.9
 .zshrc.backup
+.p10k.zsh
+.oh-my-zsh
+
+.thunderbird/
+
+
+
+.cargo/
+
+
+
+
+
+
+
+.config/GitFiend/
+
+.config/gittyup.github.com/
