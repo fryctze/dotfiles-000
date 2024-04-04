@@ -1,0 +1,142 @@
+################################################
+#Main Directories
+################################################
+Pictures/
+Desktop/
+Documents/
+Downloads/
+Music/
+Public/
+Templates/
+Videos/
+
+
+################################################
+# System
+################################################
+
+## My systems
+.ssh
+
+## Default generated
+.cache
+.Xauthority
+.xsession-errors
+.xsession-errors.old
+.bash_history
+.config/dconf/user
+.local/share/gvfs-metadata/
+.config/libfm/
+## first installed
+.config/falkon/profiles/
+## First appereance when opening gitkraken
+.local/share/recently-used.xbel
+## keystring auth => logged in user - gitkraken / bitwarden
+.gnupg/
+.pki
+### GPG keys
+.config/kwalletrc
+.local/share/keyrings/
+.local/share/kwalletd/
+#### delete above to reset saved gpg key when using ks ssh ask password plasma
+## App that using Qt
+.config/QtProject.conf
+## Git clone - Ex: Custom directory when cloning
+.gk/
+
+
+
+################################################
+# System Apps
+################################################
+
+## unused
+.config/hexchat/
+.config/epdfview/
+.config/dmenu-recent/
+.config/morc_menu/
+## used
+.config/viewnior
+.config/htop
+.config/pulse
+.config/nitrogen/
+.local/share/clipit
+.config/xarchiver/
+.config/pamac/
+.config/pcmanfm/
+
+.config/ranger/*
+!.config/ranger/rc.conf
+.local/share/ranger/
+.viminfo
+
+.moc/*
+!.moc/config
+
+
+.local/share/Trash/
+
+
+################################################
+# Apps
+################################################
+
+.config/sublime-text
+.mozilla
+.config/Bitwarden
+.config/GitFiend/
+
+# flatpak
+.var/app/
+.local/share/flatpak/
+
+## VLC
+.local/share/vlc/
+.config/vlc/
+!.config/vlc/skin/
+
+## Gitkraken
+.gitkraken
+.config/GitKraken/
+
+## Obsidian
+.config/obsidian/
+
+## VSCode
+.config/Code - OSS/
+.vscode-oss/
+
+
+################################################
+# Development Crucials
+################################################
+
+.mariadb_history
+## java
+.m2
+## node js
+.local/.node/
+
+## Wakatime
+.wakatime.cfg
+.wakatime.bdb
+.wakatime/
+.wakatime-internal.cfg
+
+## Laravel Composer
+.config/composer/
+.local/share/composer/
+
+## ZSH
+.zcompdump
+.zcompdump-AI-chan-5.9
+.zcompdump-AI-chan-5.9.zwc
+.zshrc.pre-oh-my-zsh
+.zsh_history
+.zhistory
+.p10k.zsh
+.oh-my-zsh/
+
+
+
+
