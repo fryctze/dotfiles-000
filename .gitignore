@@ -24,9 +24,22 @@ Videos/
 .xsession-errors
 .xsession-errors.old
 .bash_history
+.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
 .config/dconf/user
 .local/share/gvfs-metadata/
 .config/libfm/
+.config/gconf/desktop/%gconf.xml
+.config/gconf/desktop/gnome/%gconf.xml
+.config/gconf/desktop/gnome/interface/%gconf.xml
+.gtkrc-2.0
+.config/Kvantum/kvantum.kvconfig
+## Define dirs Doc, Picture, Music, etc
+.config/user-dirs.dirs
+.dir_colors
+## language
+.config/user-dirs.locale
+## by Lxappearance
+.icons/default/
 ## first installed
 .config/falkon/profiles/
 ## First appereance when opening gitkraken
@@ -56,6 +69,7 @@ Videos/
 .config/dmenu-recent/
 .config/morc_menu/
 ## used
+.config/gcolor3/config.ini
 .config/viewnior
 .config/htop
 .config/pulse
@@ -78,13 +92,28 @@ Videos/
 
 
 ################################################
+# Desktop Apps
+################################################
+
+## Jetbrains Toolbox Apps
+.config/autostart/jetbrains-toolbox.desktop
+.local/share/applications/jetbrains-*
+
+
+
+################################################
 # Apps
 ################################################
 
+.config/screenkey.json
 .config/sublime-text
 .mozilla
 .config/Bitwarden
 .config/GitFiend/
+
+# fontmanager
+.config/font-manager/
+.config/fontconfig/conf.d/78-Reject.conf
 
 # flatpak
 .var/app/
@@ -106,6 +135,10 @@ Videos/
 .config/Code - OSS/
 .vscode-oss/
 
+## Libre
+.config/libreoffice/
+.config/cef_user_data/
+
 
 ################################################
 # Development Crucials
@@ -114,8 +147,13 @@ Videos/
 .mariadb_history
 ## java
 .m2
+.java/
 ## node js
 .local/.node/
+.yarnrc
+## Jetbrains
+.config/JetBrains/
+.local/share/JetBrains/
 
 ## Wakatime
 .wakatime.cfg
@@ -140,3 +178,12 @@ Videos/
 
 
 
+
+
+
+
+.config/discord/
+.greentunnel/
+
+.config/configstore/update-notifier-green-tunnel.json
+.wine

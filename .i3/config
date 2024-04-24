@@ -3,6 +3,7 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+set $alt Mod1
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -33,7 +34,9 @@ bindsym $mod+Return exec terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+# bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $alt+d exec --no-startup-id rofi -show window
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -53,20 +56,43 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym $mod+Shift+Home exec --no-startup-id brightnessctl set +5%; exec notify-send 'brightness up'
+bindsym $mod+Shift+End exec --no-startup-id brightnessctl set 5%-; exec notify-send 'brightness down'
+
+
+# Media player controls
+bindsym $mod+Shift+Page_Up exec --no-startup-id amixer set Master 5%+; exec notify-send 'volume up'
+bindsym $mod+Shift+Page_Down exec --no-startup-id amixer set Master 5%-; exec notify-send 'volume down'
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym $alt+F7 exec mocp -G
+bindsym $alt+F8 exec mocp -f
+bindsym $alt+F6 exec mocp -r
+bindsym $alt+Shift+F7 exec playerctl play-pause
+bindsym $alt+Shift+F8 exec playerctl next
+bindsym $alt+Shift+F6 exec playerctl previous
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
+bindsym $alt+F2 exec firefox
+#bindsym $mod+F2 workspace $ws2; exec brave
 bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
+bindsym $alt+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+
+bindsym $mod+F6 workspace $ws6; exec gitkraken
 bindsym $mod+F5 exec terminal -e 'mocp'
+
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -98,8 +124,8 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
@@ -141,14 +167,25 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
+
+set $ws1 "1:☕"
+set $ws2 "2:🌏"
+set $ws3 "3:📖"
+set $ws4 "4:🔬"
+set $ws5 "5:🗃️"
+set $ws6 "6:"
+set $ws7 "7:🍱"
+set $ws8 "8:⚒️"
+set $ws9 "9:🎻"
+set $ws0 "10:"
+
+#🗄️ 🗂️ 📚 📖 🗃️ ☕ 🎻 🎸 🎧 🎭 🎮 ⚙️ 🔬 ⚒️ 📱 💻 🖥️ 📡 📦 💡 🌏 ♟️
+#        🧬 🩸💉🔭⚔📚🧮 🧭🍪🍱🍫 🪔⌛️🧫🦠🔮
+# Code symbol 
+# Branch symbol 
+# 
+
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -159,6 +196,8 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws0
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -169,6 +208,8 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
+bindsym $mod+Ctrl+0 move container to workspace $ws0
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -179,12 +220,22 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws0; workspace $ws0
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+
+# Allocate applications to workspaces
+#for_window [class="firefox"] move to workspace $ws2
+#for_window [class="Subl"] move to workspace $ws3
+#for_window [class="Pcmanfm"] move to workspace $ws5
+#for_window [class="GitKraken"] move to workspace $ws6
+#for_window [class="obsidian"] move to workspace $ws4
+
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -215,8 +266,11 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
+for_window [title="Kvantum Manager"] floating enable
+for_window [class="Gcolor3"] floating enable
+
 # switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
+# for_window [urgent=latest] focus
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -228,7 +282,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
+bindsym $mod+Delete mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
@@ -269,21 +323,30 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $alt+l exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-exec --no-startup-id manjaro-hello
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b; wal -R
+# exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+
+# exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+
+# Polybar
+exec_always ~/.config/polybar/launch.sh
+
+# Desktop Widget Interface
+# exec --no-startup-id ~/.i3/script/start_conky_grey
+#  exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_green
+
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+
+# exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -319,43 +382,45 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command i3status
-	position bottom
+#bar {
+#	i3bar_command i3bar
+#	status_command i3status
+#	position bottom
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
+### please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+#        #	tray_output primary
+#        #	tray_output eDP1
 
-	bindsym button4 nop
-	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
+#	bindsym button4 nop
+#	bindsym button5 nop
+#        #   font xft:URWGothic-Book 11
+#	strip_workspace_numbers yes
 
-    colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
+#        # font xft:NotoSansM Nerd Font 10
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
-    }
-}
+#    colors {
+#        background $term_background
+#        statusline $term_color4
+#        separator  #454947
+
+#        #                      border  backgr. text
+#        focused_workspace  $term_background $term_color1 $term_color7
+#        active_workspace   #595B5B #353836 #FDF6E3
+#        inactive_workspace $term_background $term_background $term_color4
+#        binding_mode       #16a085 #2C2C2C #F9FAF9
+#        urgent_workspace   $term_background $term_foreground #E5201D
+#    }
+#}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  client.focused          $term_color1 $term_color1 $term_color7 #FDF6E3
+  client.focused_inactive $term_color1 $term_background $term_foreground #454948
+  client.unfocused        $term_background $term_background $term_foreground #454948
+  client.urgent           $term_background $tern_color4 $term_foreground #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
   client.background       #2B2C2B
